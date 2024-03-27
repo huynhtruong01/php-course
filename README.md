@@ -419,3 +419,7 @@ function subtractNumber(mixed $num_1, mixed num_2) {
 
 ?>
 ```
+
+---
+
+## `Lecture 3` - Filling in the Gaps
