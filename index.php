@@ -26,10 +26,32 @@
 <?php
 $day = 'Saturday';
 
+$x = 20;
+
 $message = match ($day) {
     'Saturday', 'Sunday' => 'Enjoy the weekend!',
     'Weekday' => 'Back to the grind...',
     default => 'Invalid day',
 };
 echo $message;
+
+include "about.php";
+
+echo '<br />';
+
+function sumNumber(int $a, int $b)
+{
+    echo $a . $b;
+    return $a + $b;
+}
+
+function destroy_foo()
+{
+    global $foo;
+    unset($foo);
+}
+
+$foo = 'bar';
+destroy_foo();
+echo $foo;
 ?>
