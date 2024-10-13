@@ -1,25 +1,10 @@
 <?php
+$array1 = ['name' => 'Alice', 'age' => 21, 'major' => 'IT'];
+$array2 = ['name' => 'Alice', 'age' => 20, 'gender' => 'Female'];
 
-$largeArray = range(1, 20);
-$startTime = microtime(true);
-$startMemory = memory_get_usage();
+$numbers1 = [1, 2, 3, 4];
+$numbers2 = [1, 2, 5, 6, 9];
 
-$out = [];
-foreach($largeArray as &$value) {
-    // echo 'VALUE: ' . $value;
-    $value = $value * 2;
-}
+echo json_encode(array_search('1', $numbers1, true));
 
-$endTime = microtime(true);
-$endMemory = memory_get_usage();
-
-echo 'Time: ' . $endTime - $startTime;
-echo '-----';
-echo 'Memory: ' . round(($endMemory - $startMemory) / 1024 / 1024);
-
-echo '\n';
-
-foreach($largeArray as $value) {
-    echo 'value: ' . $value . '----';
-}
 ?>
